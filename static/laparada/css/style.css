@@ -1,0 +1,319 @@
+/* styles */
+
+body {
+  font-family: 'Life Savers', cursive;
+  padding-top:0;
+  padding:0;
+  height: 100%;
+  /*
+   *min-height: 100%;
+   */
+  font-size: 14px;
+  /*
+  line-height: 1.231;
+  text-rendering: optimizeLegibility;
+  */
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: scroll;
+
+}
+.container {margin:0}
+/*
+*/
+@font-face {
+    font-family: "Chancery";
+    src: local("URW Chancery L"), url('../fonts/urw-chancery.ttf')  format('truetype');
+}
+
+#main h2 {
+  margin-top: 30px;
+  color: #777;
+}
+
+.flotante {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:195px;
+  height:51px;
+  color:#999; 
+  padding:7px;
+  z-index:999;
+  text-align:right;
+  font-size: 16px;
+
+}
+.flotante i {
+  font-size:18px;
+  color:#09C;
+  vertical-align:middle;
+}
+.flotante span {
+  color:#fff;
+  font-size:18px;
+  font-family: 'Droid Sans', sans-serif;
+  display:block;
+  margin-top:9px;
+}
+.aviso_legal {
+  font-family: 'Droid Sans', sans-serif;
+  position:fixed;
+  right:20px;
+  bottom:6px;
+  width:195px;
+  height:20px;
+  color:#999; 
+  padding:7px;
+  z-index:999;
+  text-align:right;
+  font-size: 16px;
+
+}
+.aviso_legal a {
+  font-size:12px;
+  color:#fff;
+  vertical-align:middle;
+}
+.aviso_legal span {
+  color:#fff;
+  font-size:18px;
+  font-family: 'Droid Sans', sans-serif;
+  display:block;
+  margin-top:9px;
+}
+
+#menu {
+    position:fixed;
+    overflow-y:auto;
+/*
+    background-color:#111;
+*/
+/*
+    opacity: .9;
+    filter: alpha(opacity=80);
+*/
+    height:100% !important;
+    margin:0;
+    border-right:1px solid #333;
+    z-index:900;
+}
+#menu h2 {margin-bottom:50px;font-size:19px;}
+#menu img {opacity:.9;}
+#menu ul.nav-list {
+    font-family:"Chancery";
+    /*
+     *font-family: 'Life Savers', cursive;
+     */
+    text-align:right;
+}
+#menu ul.nav-list li {
+    border-bottom: 1px solid #333;
+    margin:10px 10px 20px 10px;
+    padding-bottom:20px;
+    background-color:transparent;
+
+}
+#menu ul.nav-list li.active a {
+    background-color:transparent ;
+    font-weight:bold;
+    opacity:1;
+/*
+    text-shadow: 0 1px 0 white;
+*/
+
+}
+#menu ul.nav-list li a:hover {
+    background-color:transparent ;
+    opacity:1;
+/*
+    text-shadow: 0 1px 0 #fff;
+*/
+}
+#menu ul.nav-list li a {
+    font-size:17px;
+    opacity:0.9;
+    color:#fff;
+    text-transform:uppercase;
+}
+#menu ul.nav-list li a span {
+    font-size:12px;
+    opacity:1;
+    color:#777;
+    display:block;
+    /*
+     *font-family: 'Droid Sans', sans-serif;
+     */
+    font-family: 'Life Savers', cursive;
+    padding-top:3px;
+    font-weight:normal;
+    text-transform:lowercase;
+}
+#central {
+/*
+    background-color:#111;
+*/
+/*
+    background: rgba(0, 0, 0, 0.8);
+*/
+    /*
+     *border-right: 4px solid #4D5052;
+     */
+    margin: 0 0 0 221px;
+    padding: 0 30px;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.7);
+    position:absolute;
+    top:0;left:0;
+    min-height:100%;
+    z-index:800;
+}
+#central #main {
+    margin-top: 30px;
+    color:#fff;
+    min-height:100%;
+    background-color: transparent;
+}
+#central #main h1 {
+    margin-bottom:30px;
+    color:#777;
+    padding-bottom:5px;
+    border-bottom: 1px solid #444;
+}
+#central #main p {
+    text-align: justify;
+    color:#fff;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+/*
+.transp {
+background: rgba(0, 0, 0, 0.9);
+    opacity: .9;
+    filter: alpha(opacity=80);
+}
+*/
+
+.close {
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  color:#fff;
+  text-shadow: 0 1px 0 white;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+
+}
+.loader, .close {
+  position:relative;
+  top:7px;
+  left:20px;
+}
+.close:hover {
+  color:#09C;
+  text-shadow: 0 1px 0 white;
+}
+
+.alpha60 {
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+/*Math.floor(0.7 * 255).toString(16);*/
+.alpha70 {
+background-color:#111;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000)";
+}
+.alpha80 {
+background-color:#111;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.77);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000)";
+}
+.alpha90 {
+background-color:#111;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.86);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5000000, endColorstr=#e5000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5000000, endColorstr=#e5000000)";
+}
+
+/*
+ *carta
+ */
+
+/*
+ *span.itoggle {
+ *  padding:5px  10px 0px 0px;border:1px solid red;
+ *  vertical-align:bottom;
+ *}
+ */
+
+.itoggle i {
+  padding-right:10px;
+  vertical-align: middle;                                                      
+  
+}
+
+
+.accordion-toggle:hover [class^="icon-"]:before,                                       
+.accordion-toggle:hover [class*=" icon-"]:before {                                     
+  color:#09C;
+}     
+
+.accordion-toggle h2 {
+  color:#ddd;
+}
+.accordion-toggle span.itoggle {
+  color:#ccc;
+}
+
+
+.accordion-group {border:none;}
+.accordion-inner {border-top: 1px solid #333;}
+
+ul.menu-items li {
+  list-style:none;
+  font-size:19px;
+  color: #fff;
+  margin: 10px 5px;
+}
+
+ul.menu-items li i {
+  color:#999;
+  vertical-align:middle;
+
+}
+ul.menu-items li:hover [class^="icon-"]:before,                                       
+ul.menu-items li:hover [class*=" icon-"]:before {                                     
+  color:#09C;
+}     
+
+ul.menu-items li span{
+  font-size: 12px;
+  /*
+   *padding:5px;
+   */
+}
+

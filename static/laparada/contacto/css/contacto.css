@@ -1,0 +1,31 @@
+/* formularios */
+/*
+#contactoForm {padding-left:5px;}
+    #contactoForm div label {display:block; margin-bottom:0.2em; font-size:14px;}
+    form fieldset p span {position:relative; z-index:89;}
+    #contactoForm div input,
+    #contactoForm div textarea {padding-bottom:0.583em; width:75%; color:#333333; font-size:1em; line-height:1em; margin-bottom:0;}
+    #contactoForm div textarea {width:95%; height:100px;}
+    form fieldset p.error span input,
+    form fieldset p.error span textarea {border:1px solid #f00;}
+    form .bt {float:right;}
+.control-group.error .help-block, .control-group.error .help-inline {display:block; background: url(../../img/icons.png) no-repeat 0 -380px; padding:4px 0 0 25px;}
+.control-group.error > label {color:#3E3E3E;}
+.contactForm .bt {margin-right:30px;}
+
+.form-actions {background-color:transparent; border:0; margin-bottom:0; margin-top:0; padding:0 22px 15px 0; overflow:hidden;}
+    #contactoForm div.form-actions .btn {background:#c00000; float:right; color:#FFF; display:inline-block; padding:5px 10px 6px; text-decoration:none; width:100px; font-weight:bold; line-height:1; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -moz-box-shadow:0 1px 3px #999; -webkit-box-shadow:0 1px 3px #999; text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25); border:0; border-bottom:1px solid rgba(0, 0, 0, 0.25); position:relative; cursor:pointer; font-size:14px;}
+    #contactoForm div .btn:hover {text-decoration:none; background:#FFF; color:#c00000;}
+    input:focus, textarea:focus {border-color:#E9AE12; box-shadow:0 1px 1px #E9AE12 inset, 0 0 8px #E9AE12; -webkit-box-shadow:0 1px 1px #E9AE12 inset, 0 0 8px #E9AE12; -moz-box-shadow:0 1px 1px #E9AE12 inset, 0 0 8px #E9AE12;}
+.maps {text-align:justify; padding-top:15px;}
+*/
+
+#map_contact {
+width: 100%;
+height: 100%;
+visibility: hidden;
+position: fixed !important;
+top: 0;
+left: 0;
+z-index:9;
+}
