@@ -1,0 +1,24 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Gallery from '../../components/Gallery.astro';
+import { entorno } from '../../i18n/content/de/index';
+---
+
+<PageLayout title={entorno.title} description={entorno.metaDescription} lang="de" currentPage="nuestro-entorno">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[var(--color-bg-card)]/80 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-[var(--color-border)]">
+      <h1 class="text-3xl md:text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-8">{entorno.title}</h1>
+      <div class="md:float-right md:ml-6 md:mb-4 mb-6">
+        <img src="/images/logo-parque.jpg" alt="Parque Regional Sierra de Gredos" class="rounded-lg w-32 h-auto" />
+      </div>
+      <div class="space-y-4 text-gray-300 leading-relaxed">
+        {entorno.paragraphs.map(p => (
+          <p set:html={p} />
+        ))}
+      </div>
+      <div class="mt-8">
+        <Gallery images={entorno.images} />
+      </div>
+    </div>
+  </div>
+</PageLayout>

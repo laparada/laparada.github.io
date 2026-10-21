@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { enlaces } from '../../i18n/content/es/index';
+---
+
+<PageLayout title={enlaces.title} description={enlaces.metaDescription} lang="es" currentPage="enlaces">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[var(--color-bg-card)]/80 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-[var(--color-border)]">
+      <h1 class="text-3xl md:text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-8">{enlaces.title}</h1>
+      <ul class="space-y-3">
+        {enlaces.links.map(link => (
+          <li>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 p-3 rounded-lg bg-[var(--color-bg-dark)] border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors group"
+            >
+              <svg class="w-5 h-5 text-[var(--color-accent)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              <div>
+                <span class="text-gray-200 group-hover:text-[var(--color-accent)] transition-colors">{link.label}</span>
+                <span class="block text-sm text-gray-500">{link.url}</span>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</PageLayout>

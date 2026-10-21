@@ -1,0 +1,36 @@
+---
+const slides = [
+  '/images/slideshow/slide-1.jpg',
+  '/images/slideshow/slide-2.jpg',
+  '/images/slideshow/slide-3.jpg',
+  '/images/slideshow/slide-4.jpg',
+  '/images/slideshow/slide-5.jpg',
+  '/images/slideshow/slide-6.jpg',
+  '/images/slideshow/slide-7.jpg',
+];
+---
+
+<div class="fixed inset-0 z-0 overflow-hidden">
+  {slides.map((src, i) => (
+    <div
+      class="absolute inset-0 bg-cover bg-center slideshow-slide"
+      style={`background-image: url('${src}'); animation-delay: ${i * 3}s;`}
+    />
+  ))}
+  <div class="absolute inset-0 bg-black/40" />
+</div>
+
+<style>
+  .slideshow-slide {
+    opacity: 0;
+    animation: slideshow 21s infinite;
+  }
+
+  @keyframes slideshow {
+    0% { opacity: 0; }
+    4.76% { opacity: 1; }
+    14.29% { opacity: 1; }
+    19.05% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+</style>

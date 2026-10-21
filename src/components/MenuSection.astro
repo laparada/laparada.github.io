@@ -1,0 +1,33 @@
+---
+interface Props {
+  name: string;
+  items: string[];
+  open?: boolean;
+}
+
+const { name, items, open = false } = Astro.props;
+---
+
+<details class="group border border-[var(--color-border)] rounded-lg overflow-hidden" open={open || undefined}>
+  <summary class="flex items-center justify-between cursor-pointer px-5 py-4 bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-card-hover)] transition-colors">
+    <h2 class="text-xl font-[var(--font-display)] text-[var(--color-accent)] m-0">{name}</h2>
+    <svg
+      class="w-5 h-5 text-[var(--color-accent)] transition-transform group-open:rotate-180"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </summary>
+  <div class="px-5 py-4 bg-[var(--color-bg-dark)]">
+    <ul class="space-y-2">
+      {items.map(item => (
+        <li class="flex items-start gap-3 text-gray-300">
+          <span class="text-[var(--color-accent)] mt-1 shrink-0">&#8226;</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</details>

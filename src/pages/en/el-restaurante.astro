@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { restaurante } from '../../i18n/content/en/index';
+---
+
+<PageLayout title={restaurante.title} description={restaurante.metaDescription} lang="en" currentPage="el-restaurante">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[var(--color-bg-card)]/80 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-[var(--color-border)]">
+      <h1 class="text-3xl md:text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-8">{restaurante.title}</h1>
+      <div class="md:float-right md:ml-6 md:mb-4 mb-6">
+        <img src="/images/restaurante.jpg" alt="La Parada del Arriero" class="rounded-lg w-full md:w-56 h-auto" />
+      </div>
+      <div class="prose prose-invert max-w-none space-y-4 text-gray-300 leading-relaxed">
+        <p>{restaurante.intro}</p>
+        <p>{restaurante.menu}</p>
+        <p>{restaurante.carta}</p>
+        <p>{restaurante.capacidad}</p>
+        <h2 class="text-2xl font-[var(--font-display)] text-[var(--color-accent)] mt-8 mb-4">{restaurante.objetivoTitle}</h2>
+        <p>{restaurante.objetivo}</p>
+        <h2 class="text-2xl font-[var(--font-display)] text-[var(--color-accent)] mt-8 mb-4">{restaurante.porqueTitle}</h2>
+        <p>{restaurante.porque1}</p>
+        <p>{restaurante.porque2}</p>
+        <p>{restaurante.porque3}</p>
+      </div>
+    </div>
+  </div>
+</PageLayout>
