@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="md:hidden relative h-screen">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/slideshow/slide-1.jpg');">
+    <div class="absolute inset-0 bg-black/50" />
+  </div>
+  <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+    <img src="/images/logo.png" alt="La Parada del Arriero" class="w-32 h-auto mb-6" />
+    <h1 class="text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-3">{title}</h1>
+    <p class="text-xl text-gray-200">{subtitle}</p>
+  </div>
+</div>

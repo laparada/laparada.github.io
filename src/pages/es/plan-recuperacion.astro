@@ -1,0 +1,17 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { planRecuperacion } from '../../i18n/content/es/index';
+---
+
+<PageLayout title={planRecuperacion.title} description={planRecuperacion.metaDescription} lang="es" currentPage="plan-recuperacion">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[var(--color-bg-card)]/80 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-[var(--color-border)]">
+      <h1 class="text-3xl md:text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-8">{planRecuperacion.title}</h1>
+      <img
+        src={planRecuperacion.image}
+        alt={planRecuperacion.title}
+        class="w-full max-w-2xl h-auto rounded-lg"
+      />
+    </div>
+  </div>
+</PageLayout>

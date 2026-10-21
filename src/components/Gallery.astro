@@ -1,0 +1,31 @@
+---
+interface Props {
+  images: { src: string; alt: string }[];
+}
+
+const { images } = Astro.props;
+---
+
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+  {images.map(img => (
+    <a
+      href={img.src}
+      class="glightbox group relative aspect-square overflow-hidden rounded-lg bg-[var(--color-bg-card)]"
+      data-gallery="gallery"
+    >
+      <img
+        src={img.src}
+        alt={img.alt}
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors" />
+    </a>
+  ))}
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script is:inline>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>

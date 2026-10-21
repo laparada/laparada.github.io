@@ -1,0 +1,31 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang: Lang;
+  currentPage?: string;
+  showSlideshow?: boolean;
+}
+
+const { title, description = '', lang, currentPage = '', showSlideshow = false } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} lang={lang}>
+  {showSlideshow && (
+    <div class="hidden md:block">
+      <slot name="slideshow" />
+    </div>
+  )}
+  <Navbar lang={lang} currentPage={currentPage} />
+  <main class="relative z-10 pt-20 pb-24 min-h-screen">
+    <slot />
+  </main>
+  <Footer lang={lang} />
+  <ContactInfo lang={lang} />
+</BaseLayout>

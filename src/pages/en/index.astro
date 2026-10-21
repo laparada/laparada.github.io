@@ -1,0 +1,18 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Slideshow from '../../components/Slideshow.astro';
+import HeroImage from '../../components/HeroImage.astro';
+import { home } from '../../i18n/content/en/index';
+---
+
+<PageLayout title={home.title} description={home.metaDescription} lang="en" currentPage="index" showSlideshow>
+  <Slideshow slot="slideshow" />
+  <HeroImage title={home.title} subtitle={home.subtitle} />
+  <div class="hidden md:flex h-[calc(100vh-5rem)] items-center justify-center text-center">
+    <div>
+      <img src="/images/logo.png" alt="La Parada del Arriero" class="w-40 h-auto mx-auto mb-6" />
+      <h1 class="text-5xl lg:text-6xl font-[var(--font-display)] text-[var(--color-accent)] mb-4">{home.title}</h1>
+      <p class="text-2xl text-gray-200">{home.subtitle}</p>
+    </div>
+  </div>
+</PageLayout>

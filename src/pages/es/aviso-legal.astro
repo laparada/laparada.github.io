@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { avisoLegal } from '../../i18n/content/es/index';
+---
+
+<PageLayout title={avisoLegal.title} description={avisoLegal.metaDescription} lang="es" currentPage="aviso-legal">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[var(--color-bg-card)]/80 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-[var(--color-border)]">
+      <h1 class="text-3xl md:text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-8">{avisoLegal.title}</h1>
+      <div class="space-y-8 text-gray-300 leading-relaxed">
+        {avisoLegal.sections.map(section => (
+          <div>
+            <h2 class="text-xl font-[var(--font-display)] text-[var(--color-accent)] mb-3">{section.heading}</h2>
+            <div class="whitespace-pre-line">{section.content}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</PageLayout>

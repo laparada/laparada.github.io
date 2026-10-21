@@ -1,0 +1,38 @@
+---
+import { languages, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  currentPage?: string;
+}
+
+const { lang, currentPage = '' } = Astro.props;
+
+const flags: Record<Lang, string> = {
+  es: 'ES',
+  en: 'EN',
+  de: 'DE',
+};
+
+function getEquivalentUrl(targetLang: Lang): string {
+  const pagePath = currentPage === 'index' ? '/' : `/${currentPage}/`;
+  return `/${targetLang}${pagePath}`;
+}
+---
+
+<div class="flex items-center gap-1">
+  {(Object.keys(languages) as Lang[]).map(l => (
+    <a
+      href={getEquivalentUrl(l)}
+      class:list={[
+        'px-2 py-1 text-xs font-semibold rounded transition-colors',
+        l === lang
+          ? 'bg-[var(--color-accent)] text-white'
+          : 'text-gray-400 hover:text-white hover:bg-white/10',
+      ]}
+      aria-label={languages[l]}
+    >
+      {flags[l]}
+    </a>
+  ))}
+</div>

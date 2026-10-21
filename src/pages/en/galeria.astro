@@ -1,0 +1,14 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Gallery from '../../components/Gallery.astro';
+import { galeria } from '../../i18n/content/en/index';
+---
+
+<PageLayout title={galeria.title} description={galeria.metaDescription} lang="en" currentPage="galeria">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-[var(--color-bg-card)]/80 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-[var(--color-border)]">
+      <h1 class="text-3xl md:text-4xl font-[var(--font-display)] text-[var(--color-accent)] mb-8">{galeria.title}</h1>
+      <Gallery images={galeria.images} />
+    </div>
+  </div>
+</PageLayout>
